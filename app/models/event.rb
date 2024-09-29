@@ -11,8 +11,7 @@ class Event < ApplicationRecord
 
   has_one_attached :main_image
 
-  validates :name, presence: true, uniqueness: true
-  validates :location, presence: true
+  validates :name, uniqueness: { scope: :starts_at, message: "must be unique per time" }
 
   validates :description, length: { minimum: 25 }
 
