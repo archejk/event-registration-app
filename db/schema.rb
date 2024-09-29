@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_04_235315) do
+ActiveRecord::Schema.define(version: 2024_09_29_094843) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -65,6 +65,10 @@ ActiveRecord::Schema.define(version: 2020_02_04_235315) do
     t.text "description"
     t.integer "capacity", default: 1
     t.string "slug"
+    t.string "region"
+    t.string "province"
+    t.string "city"
+    t.string "barangay"
   end
 
   create_table "likes", force: :cascade do |t|

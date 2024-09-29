@@ -1,4 +1,12 @@
-<%= form_with(model: event, local: true) do |f| %>
+<%= form_with(model: event, local: true,
+  data: { 
+      controller: "select-philippines-address",
+      select_philippines_address_region_name_value: event.region,
+      select_philippines_address_province_name_value: event.province,
+      select_philippines_address_city_name_value: event.city,
+      select_philippines_address_brgy_name_value: event.barangay,
+  }) do |f| %>
+
   <%= render "shared/errors", object: event %>
 
   <%= f.label :name %>
@@ -7,14 +15,31 @@
   <%= f.label :description %>
   <%= f.text_area :description, rows: 5 %>
 
-  <%= f.label :location %>
-  <%= f.text_field :location %>
+  <div class="my-1">
+    <%= f.label :region, class: "form-label required" %>
+    <%= f.select :region, [], { prompt: "Select Region" }, required: true, data: { "select-philippines-address-target": "regionInput", action: "change->select-philippines-address#regionInputChanged" } %>
+  </div>
+
+  <div class="my-1">
+    <%= f.label :province, class: "form-label required" %>
+    <%= f.select :province, [], { prompt: "Select Province" }, required: true, data: { "select-philippines-address-target": "provinceInput", action: "change->select-philippines-address#provinceInputChanged" } %>
+  </div>
+
+  <div class="my-1">
+    <%= f.label :city, class: "form-label required" %>
+    <%= f.select :city, [], { prompt: "Select City" }, required: true, data: { "select-philippines-address-target": "cityInput", action: "change->select-philippines-address#cityInputChanged" } %>
+  </div>
+
+  <div class="my-1">
+    <%= f.label :barangay, class: "form-label required" %>
+    <%= f.select :barangay, [], { prompt: "Select Barangay" }, required: true, data: { "select-philippines-address-target": "barangayInput", action: "change->select-philippines-address#barangayInputChanged" } %>
+  </div>
 
   <%= f.label :price %>
   <%= f.number_field :price %>
 
   <%= f.label :starts_at %>
-  <%= f.datetime_select :starts_at, {ampm: true}, {class: "datetime"} %>
+  <%= f.datetime_select :starts_at, { ampm: true }, { class: "datetime" } %>
 
   <%= f.label :capacity %>
   <%= f.number_field :capacity %>

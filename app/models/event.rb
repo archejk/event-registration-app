@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
 
   before_save :set_slug
+  before_save :set_full_location
 
   has_many :registrations, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -40,6 +41,10 @@ class Event < ApplicationRecord
   end
 
 private
+  def set_full_location
+    self.location = "#{barangay}, #{city}, #{province}, #{region}"
+  end
+
   def acceptable_image
     return unless main_image.attached?
 
