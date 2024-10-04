@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
-    redirect_to events_url, notice: "You're now signed out!"
+    reset_session
+    redirect_to events_url, notice: "Signed out successfully!"
   end
 end
