@@ -18,12 +18,12 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Use Dart SASS [https://github.com/rails/dartsass-rails]
-gem "dartsass-rails"
+# gem "dartsass-rails"
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", ">= 4.0.1"
 
-gem 'jsbundling-rails'
+# gem 'jsbundling-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
@@ -62,7 +62,8 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rack-mini-profiler', '~> 3.0'
+
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -80,4 +81,7 @@ end
 gem 'tzinfo-data'
 
 gem 'wdm', '>= 0.1.0'
+
 gem 'net-smtp'
+
+gem 'jquery-rails'
