@@ -28,7 +28,7 @@ gem 'jsbundling-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-# gem 'webpacker', '~> 5.0'
+gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -47,8 +47,6 @@ gem 'activestorage-cloudinary-service'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-gem 'bootstrap', '~> 4.3.1'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -62,7 +60,7 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
+  # rails gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -80,4 +78,23 @@ end
 gem 'tzinfo-data'
 
 gem 'wdm', '>= 0.1.0'
+
 gem 'net-smtp'
+
+# gem "rack"
+
+gem "ransack"
+
+gem "pagy", "~> 7.0"
+
+gem "money-rails", "~> 1.15"
+
+gem "public_uid", "~> 2.2"
+
+gem "jquery-rails", "~> 4.6"
+
+gem "bootstrap-icons-helper", "~> 2.0"
+
+gem "bootstrap", "~> 5.3"
+
+gem "devise", "~> 4.9"

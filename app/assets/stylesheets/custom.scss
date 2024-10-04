@@ -67,11 +67,11 @@ header {
       letter-spacing: 1px;
 
       &.left {
-        @extend .mr-auto;
+        @extend .mr-auto !optional;
       }
 
       &.right {
-        @extend .ml-auto;
+        @extend .ml-auto !optional;
       }
 
       li {
@@ -133,7 +133,7 @@ section.event {
   }
 
   .summary {
-    @extend .col-md-9, .text-left;
+    @extend .col-md-9, .text-left !optional;
   }
 
   h2 {
@@ -207,11 +207,11 @@ section.event-details {
     margin-top: 1rem;
 
     form {
-      @extend .input-group-prepend;
+      @extend .input-group-prepend !optional;
     }
 
     .count {
-      @extend .input-group-append, .input-group-text;
+      @extend .input-group-append, .input-group-text !optional;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -327,7 +327,7 @@ section.user {
     }
 
     .date {
-      @extend .col-md-4, .text-right;
+      @extend .col-md-4, .text-right !optional;
       font-size: 1rem;
       font-weight: 600;
       margin-top: 1rem;
@@ -444,7 +444,7 @@ form:not([class="button_to"]) {
   }
 
   input[type="submit"] {
-    @extend .btn, .btn-primary, .btn-block;
+    @extend .btn, .btn-primary, .btn-block !optional;
     margin-top: 1.5rem;
   }
 
@@ -461,7 +461,7 @@ form:not([class="button_to"]) {
   }
 
   input[type="file"] {
-    @extend .form-control-file;
+    @extend .form-control-file !optional;
     margin-bottom: 0.75rem;
     width: 100%;
   }
