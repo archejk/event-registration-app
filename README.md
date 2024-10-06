@@ -2,7 +2,7 @@
 
 The Event Registration App is a dynamic web application built with Ruby on Rails that enables users to create and manage events effortlessly. It simplifies event planning while enhancing user experience.
 
-- The app features a dynamic address selection system integrated with the Philippines Address API, allowing for quick and accurate entry of location details.
+- The app features a dynamic address selection system integrated with the [Philippines Address API](https://github.com/wilfredpine/philippine-address-selector), allowing for quick and accurate entry of location details.
 - Users can be categorized into Admin Users and Public Users, providing tailored access and functionality for managing events.
 
 ## Features
@@ -13,9 +13,9 @@ The Event Registration App is a dynamic web application built with Ruby on Rails
 - **Event Creation**:
     - Users can create new events with essential details such as name, description, date, time, price, and capacity.
 - **Dynamic Address Selection**:
-    - Integrated Philippines Address API for seamless address selection, enhancing user experience.
+    - Integrated [Philippines Address API](https://github.com/wilfredpine/philippine-address-selector) for seamless address selection, enhancing user experience.
 - **Image Management**:
-    - Utilizes Cloudinary for efficient image uploads and storage.
+    - Utilizes [Cloudinary](https://cloudinary.com/) for efficient image uploads and storage.
 
 ## Technologies
 
